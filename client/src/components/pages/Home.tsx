@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import Slider from 'infinite-react-carousel';
-import Api from '../Api';
+import Api from '../Stripe/Api';
+
 
 export  interface Products{
     img: string
