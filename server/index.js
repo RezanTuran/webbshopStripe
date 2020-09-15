@@ -3,6 +3,7 @@ require('dotenv').config('.env')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const cors = require('cors')
 
+/* Test product */
 // const shoes = [{
 //   id: 0,
 //   name : "Adidas - Superstar classic",
@@ -19,8 +20,6 @@ app.use(express.json())
 
 app.use(cors())
 //app.get('/api/shoes', (req,res) => res.json(shoes))
-
-//const stripe = require('stripe')('sk_test_51HMTp2IFKCcAoJyNeaX7h3vb65Mr6W7iJ8r7LcEfdFUJPQRhVbRj1ibIgWUXh7awkWS6h5Y6U20Rdp79hPZYq3rL00I2vZ9OVz');
 
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({

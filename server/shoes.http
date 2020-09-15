@@ -1,2 +1,5 @@
-### GET Todos
+### GET 
 GET http://localhost:3001/api/shoes
+
+### Post
+POST http://localhost:3001/create-checkout-session

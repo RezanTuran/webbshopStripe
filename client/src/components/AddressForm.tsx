@@ -3,7 +3,7 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import PaymentForm from './PaymentForm';
 import Delivery from './Delivery';
 import CheckOutStripe from '../components/pages/CheckOutStripe'
-import { CartConsumer, ContextState, CartProvider, CartContext} from '../contexts/cartContxt';
+import { CartContext} from '../contexts/cartContxt';
 
 
 export default class ValidationForm extends React.Component {

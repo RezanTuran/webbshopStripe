@@ -11,7 +11,7 @@ const Footer = () => {
             <div style={boxStyle}> <FacebookIcon style={iconStyle} /> </div>
             <div style={boxStyle}> <InstagramIcon style={iconStyle}  /> </div>
             <div style={boxStyle}> <TwitterIcon style={iconStyle}  /> </div>
-            <h3 style={footerText}> &copy; Grup 4</h3>
+            <h3 style={footerText}> &copy; Grup 2</h3>
         </div>
     </div>
     );
