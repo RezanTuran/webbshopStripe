@@ -1,2 +1,14 @@
-### GET Todos
+### GET 
 GET http://localhost:3001/api/shoes
+
+###
+### Post
+POST http://localhost:3001/create-checkout-session
+
+###
+POST http://localhost:3001/verify-checkout-session
+Content-Type: application/json
+
+{
+    "sessionId": "cs_test_uXwGXafSIUqnB05bJH7MzbtSmMyRHXX0BcRvQXHny1lnY0di30vKhhWH"
+}

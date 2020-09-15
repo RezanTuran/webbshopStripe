@@ -1,6 +1,5 @@
 import React, { createContext, Component } from 'react'
 import { Products } from '../components/Product'
-import { threadId } from 'worker_threads'
 
 interface CartItem {
     theItem: Products,

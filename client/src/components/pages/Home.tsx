@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
 import Slider from 'infinite-react-carousel';
-import Api from '../Stripe/Api';
 
 
 export  interface Products{
@@ -81,7 +80,6 @@ const Home = () => {
             <img style={imgSize} src={ require("../../assets/images/" + Products[9].img) } alt="produktImg" />
           </div>
         </Slider>
-        <Api />
       </div>
     );
 };
