@@ -63,7 +63,6 @@ import { CartContext} from '../../contexts/cartContxt';
 const stripePromise = loadStripe('pk_test_51HMTp2IFKCcAoJyN5fiHwp6EwNIPvRPfRoOW2w9Ky80xmaGkN6NindMP06szreaUexh4PZECFaotYIw35lD9mPU900NKCXkZBP');
 
 
-
 function StipePay() {
   const { cartItems } = useContext(CartContext);
  // console.log("ST",cartItems[0]);
@@ -76,13 +75,12 @@ function StipePay() {
   container['amount']= item.theItem.price*100;
   container['currency']= "sek";
 
-
   return container;
 
  })
  
 
-  const handleClick = async (event) => {
+const handleClick = async (event) => {
 
 
    // console.log("LI",line_items[0]);
