@@ -120,7 +120,7 @@ static contextType=CartContext;
                     disabled = {(this.state.disabled)}
                 />
                 <br />
-                <CheckOutStripe  value={this.state.total}/>
+                <CheckOutStripe value={this.state.total}/>
                 <Delivery />
                 <PaymentForm />
             </ValidatorForm>

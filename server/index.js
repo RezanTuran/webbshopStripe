@@ -23,20 +23,24 @@ app.use(cors())
 //const stripe = require('stripe')('sk_test_51HMTp2IFKCcAoJyNeaX7h3vb65Mr6W7iJ8r7LcEfdFUJPQRhVbRj1ibIgWUXh7awkWS6h5Y6U20Rdp79hPZYq3rL00I2vZ9OVz');
 
 app.post("/create-checkout-session", async (req, res) => {
+  console.log(JSON.stringify(req.body));
+
+  const items=req.body ;
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
-    line_items: [
-      {
-        price_data: {
-          currency: "sek",
-          product_data: {
-            name: "T-shirt",
-          },
-          unit_amount: 2000,
-        },
-        quantity: 1,
-      },
-    ],
+    line_items: items,
+    // line_items: [
+    //   {
+    //     price_data: {
+    //       currency: "sek",
+    //       product_data: {
+    //         name: "T-shirt",
+    //       },
+    //       unit_amount: 2000,
+    //     },
+    //     quantity: 1,
+    //   },
+    // ],
     mode: "payment",
     success_url: "http://localhost:3000/done",
     cancel_url: "http://localhost:3000",
