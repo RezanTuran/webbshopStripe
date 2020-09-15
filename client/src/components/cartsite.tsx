@@ -4,15 +4,16 @@ import { CartConsumer, ContextState } from '../contexts/cartContxt'
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+import StipePay from './Stripe/StipePay'
 
 export default function cartView() {
     return (
         <CartConsumer>
             {(contextData: ContextState) => {
-                let totalPrice = contextData.countTotalPrice;
+                let totalPrice = 0;
 
                 function cardValidation(){
-                    if(Number(totalPrice) === 0){
+                    if(totalPrice === 0){
                         alert("Kundvagnen är tomt")
                         window.location.reload();
                     }
@@ -25,8 +26,7 @@ export default function cartView() {
                         {
                             contextData.cartItems.length ?
                                 contextData.cartItems.map((cartItem, index: number) => {
-                                    console.log(contextData.countTotalPrice())
-                                   // totalPrice = contextData.countTotalPrice; //totalPrice + cartItem.theItem.price * cartItem.quantity;
+                                    totalPrice = totalPrice + cartItem.theItem.price * cartItem.quantity;
                                     return (
                                     <div style={productCard}>  
                                         <div key={cartItem.theItem.id}>
@@ -56,10 +56,9 @@ export default function cartView() {
                     </div>
                     
                 
-                        <h6>{contextData.cartItems.length ? "Total pris är: " + contextData.countTotalPrice(): "Total pris är: 0"} kr</h6>
-                        
-                        <Link to="/Checkout">
-                            <Button variant="contained" color="primary" onClick={cardValidation}>Till Betalning</Button>
+                        <h6>{contextData.cartItems.length ? "Total pris är: " + totalPrice : "Total pris är: 0"} kr</h6>
+                        <Link to="">
+                            <StipePay />
                         </Link>
                         <br/>
 
