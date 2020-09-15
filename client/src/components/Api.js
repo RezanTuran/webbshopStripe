@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 
 async function getShoes() {
     const result = await fetch('http://localhost:3001/api/shoes')
@@ -11,10 +9,10 @@ getShoes()
 const Api = () => {
     return(
         <div>
-
+          
+    
         </div>
     );
 };
-ReactDOM.render(<Api />, document.getElementById('root'));
 
 export default Api;

@@ -2,7 +2,6 @@ import React from 'react';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import PaymentForm from './PaymentForm';
 import Delivery from './Delivery';
-import CheckOutStripe from '../components/pages/CheckOutStripe'
 
 
 export default class ValidationForm extends React.Component {
@@ -113,7 +112,6 @@ export default class ValidationForm extends React.Component {
                     disabled = {(this.state.disabled)}
                 />
                 <br />
-                <CheckOutStripe />
                 <Delivery />
                 <PaymentForm />
             </ValidatorForm>

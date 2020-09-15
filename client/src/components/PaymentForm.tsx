@@ -9,6 +9,8 @@ import SwishPaymentForm from './SwishPaymentForm';
 import InvoicePaymentForm from './InvoicePaymentForm';
 import CardPaymentForm from './CardPaymentForm';
 
+
+
 interface Props {}
 interface State {
   selectedPaymentMethod: "faktura" | "betalkort" | "swish"
@@ -50,6 +52,8 @@ export default class PaymentForm extends React.Component<Props, State> {
         <Grid container spacing={3}>
           {this.renderPaymentFields()}
         </Grid>
+        
+
       </React.Fragment>
     );
   }

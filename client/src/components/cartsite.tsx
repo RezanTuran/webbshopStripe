@@ -4,6 +4,8 @@ import { CartConsumer, ContextState } from '../contexts/cartContxt'
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
+import CheckOutStripe from './pages/CheckOutStripe'
+
 
 export default function cartView() {
     return (
@@ -53,12 +55,11 @@ export default function cartView() {
 
                         }
                     </div>
-                    
                 
                         <h6>{contextData.cartItems.length ? "Total pris är: " + totalPrice : "Total pris är: 0"} kr</h6>
-                        <Link to="/Checkout">
-                            <Button variant="contained" color="primary" onClick={cardValidation}>Till Betalning</Button>
-                        </Link>
+                        <Button onClick={cardValidation}>
+                            <CheckOutStripe />
+                        </Button>
                         <br/>
 
                         <Link to="/Product">
