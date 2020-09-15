@@ -3,9 +3,13 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import PaymentForm from './PaymentForm';
 import Delivery from './Delivery';
 import CheckOutStripe from '../components/pages/CheckOutStripe'
+import { CartConsumer, ContextState, CartProvider, CartContext} from '../contexts/cartContxt';
 
 
 export default class ValidationForm extends React.Component {
+   
+static contextType=CartContext;
+
     state = {
         formData: {
             name: '',
@@ -15,10 +19,12 @@ export default class ValidationForm extends React.Component {
             address: '',
         },
         submitted: false,
-        disabled: false
+        disabled: false,
+        total: this.context.countTotalPrice()
     }
-
+ 
     handleChange = (event) => {
+        //console.log("THIS", this.state.total);
         const { formData } = this.state;
         formData[event.target.name] = event.target.value;
         this.setState({ formData });
@@ -54,6 +60,7 @@ export default class ValidationForm extends React.Component {
     render() {
         const { formData } = this.state;
         return (
+          
             <React.Fragment>
             <ValidatorForm
                 ref="form"
@@ -113,11 +120,12 @@ export default class ValidationForm extends React.Component {
                     disabled = {(this.state.disabled)}
                 />
                 <br />
-                <CheckOutStripe />
+                <CheckOutStripe  value={this.state.total}/>
                 <Delivery />
                 <PaymentForm />
             </ValidatorForm>
             </React.Fragment>
+        
         );
     }
 }

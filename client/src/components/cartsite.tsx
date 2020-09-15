@@ -9,10 +9,10 @@ export default function cartView() {
     return (
         <CartConsumer>
             {(contextData: ContextState) => {
-                let totalPrice = 0;
+                let totalPrice = contextData.countTotalPrice;
 
                 function cardValidation(){
-                    if(totalPrice === 0){
+                    if(Number(totalPrice) === 0){
                         alert("Kundvagnen är tomt")
                         window.location.reload();
                     }
@@ -25,7 +25,8 @@ export default function cartView() {
                         {
                             contextData.cartItems.length ?
                                 contextData.cartItems.map((cartItem, index: number) => {
-                                    totalPrice = totalPrice + cartItem.theItem.price * cartItem.quantity;
+                                    console.log(contextData.countTotalPrice())
+                                   // totalPrice = contextData.countTotalPrice; //totalPrice + cartItem.theItem.price * cartItem.quantity;
                                     return (
                                     <div style={productCard}>  
                                         <div key={cartItem.theItem.id}>
@@ -55,7 +56,8 @@ export default function cartView() {
                     </div>
                     
                 
-                        <h6>{contextData.cartItems.length ? "Total pris är: " + totalPrice : "Total pris är: 0"} kr</h6>
+                        <h6>{contextData.cartItems.length ? "Total pris är: " + contextData.countTotalPrice(): "Total pris är: 0"} kr</h6>
+                        
                         <Link to="/Checkout">
                             <Button variant="contained" color="primary" onClick={cardValidation}>Till Betalning</Button>
                         </Link>

@@ -1,9 +1,11 @@
 import React from 'react';
 import StripeCheckout from "react-stripe-checkout";
-import axios from "axios"
+import axios from 'axios';
+//import { CartConsumer, ContextState } from '../../contexts/cartContxt';
 
 
 const StripeCheckoutButton = ({ totalPrice }) => {
+   // console.log("SBYN",totalPrice)
     let [responseData, setResponseData] = React.useState('')
     const priceForStripe = totalPrice * 100;
     const publishableKey =
@@ -39,6 +41,8 @@ const StripeCheckoutButton = ({ totalPrice }) => {
     };
     
     return (
+    
+           
     <StripeCheckout
     label="Pay by Stripe"
     name="Skor"
@@ -49,10 +53,11 @@ const StripeCheckoutButton = ({ totalPrice }) => {
     panelLabel="Pay by Stripe"
     token={onToken}
     stripeKey={publishableKey}
+    totalPrice={totalPrice}
     />
     
-    
-    
+
+   
     );
    };
     

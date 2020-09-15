@@ -3,10 +3,12 @@ import StripeCheckoutButton from '../Stripe/StipePay'
 
 
 
-const CheckOutStripe = () => {
+const CheckOutStripe = (totalPrice) => {
+    console.log("BYN",totalPrice.value);
     return(
+    
         <div>
-            <StripeCheckoutButton />
+            <StripeCheckoutButton totalPrice={totalPrice.value} />
         </div>
     );
 };
