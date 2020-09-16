@@ -159,7 +159,7 @@ export default function Navbar(props: Props) {
           ><MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Skor Butik
+            Skobutik
           </Typography>
           {<Link to="/cart">
               <CartConsumer>

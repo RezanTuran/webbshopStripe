@@ -57,7 +57,7 @@ export default function cartView() {
                     </div>
                     
                 
-                        <h6>{contextData.cartItems.length ? "Total pris är: " + totalPrice : "Total pris är: 0"} kr</h6>
+                        <h6>{contextData.cartItems.length ? "Totalpris: " + totalPrice : "Totalpris: 0"} kr</h6>
                             <Link onClick={cardValidation} to="">
                                 <StipePay />
                             </Link>
