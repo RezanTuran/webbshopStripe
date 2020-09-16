@@ -34,9 +34,9 @@ const Done = () => {
             console.log(session.isVerfied);
             
             if(session.isVerfied){
-                alert("Betalningen genomfört")
+                alert("Tack för din betalning!")
             }else{
-                alert("OBS Betalningen genomfört inte")
+                alert("OBS! Transaktionen kan inte slutföras")
             }
     }
 }

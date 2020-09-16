@@ -1,8 +1,8 @@
-# Betaltjänst med integration emot Stripe - Grupp 2
+# Betaltjänst med integration mot Stripe - Grupp 2
 
 #### Grupp 2 Medhavdare: Rezan Turan, Frida Baldvinsdottir och Polina Yaromchyk
 
-En hemsida ska skapas med hjälp av Create-React-App och Typescript. Hemsidan ska bestå av en **startsida** där alla produkter listas, en **produktsida** där en utvald produkt visass och en **utcheckningssida** där kunden har möjligheten att slutföra sitt köp. Det ska användas ett designsystem för att hjälpa till att skapa layouten och alla grafiska element på hemsidan - som man väljer utifrån följande lista:
+En hemsida ska skapas med hjälp av Create-React-App och Typescript. Hemsidan ska bestå av en **startsida** där alla produkter listas, en **produktsida** där en utvald produkt visas och en **utcheckningssida** där kunden har möjligheten att slutföra sitt köp. Det ska användas ett designsystem för att hjälpa till att skapa layouten och alla grafiska element på hemsidan - som man väljer utifrån följande lista:
 
 [Awesome React Design Systems](https://github.com/jbranchaud/awesome-react-design-systems)
 
@@ -17,7 +17,7 @@ Client (Frontend)
 * [NodeJS](https://nodejs.org/en/)
 
 
-Vår grupp har valt Marerial UI designsystem till vårt projekt. Dokumentationnen och hur man installerar Material UI hittar ni här:
+Vår grupp har valt Marerial UI designsystem till vårt projekt. Dokumentationen och hur man installerar Material UI hittar ni här:
 
 * [Material UI](https://material-ui.com/)
 
@@ -33,7 +33,7 @@ Server (Backend)
 
 ### Att starta projektet
 
-När ni har installerar node.js och alla nödvändiga tilläg i er kodredigerare, gör följande:
+När ni har installerar node.js och alla nödvändiga tillägg i er kodredigerare, gör följande:
 
 1. Kör `git clone https://github.com/RezanTuran/webbshopStripe` (eller klona [ditt eget fork](https://github.com/RezanTuran/webbshopStripe/fork) från repository)
 2. Gå till den 'klonade' mappen `cd webbshopStripe`
