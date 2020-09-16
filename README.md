@@ -1,5 +1,7 @@
 # Betaltjänst med integration emot Stripe - Grupp 2
 
+#### Grupp 2 Medhavdare: Rezan Turan, Frida Baldvinsdottir och Polina Yaromchyk
+
 En hemsida ska skapas med hjälp av Create-React-App och Typescript. Hemsidan ska bestå av en **startsida** där alla produkter listas, en **produktsida** där en utvald produkt visass och en **utcheckningssida** där kunden har möjligheten att slutföra sitt köp. Det ska användas ett designsystem för att hjälpa till att skapa layouten och alla grafiska element på hemsidan - som man väljer utifrån följande lista:
 
 [Awesome React Design Systems](https://github.com/jbranchaud/awesome-react-design-systems)
