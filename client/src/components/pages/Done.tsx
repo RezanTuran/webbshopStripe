@@ -34,9 +34,9 @@ const Done = () => {
             console.log(session.isVerfied);
             
             if(session.isVerfied){
-                alert("Betalningen genomfört")
+                alert("Tack för din betalning!")
             }else{
-                alert("OBS Betalningen genomfört inte")
+                alert("OBS! Transaktionen kan inte slutföras")
             }
     }
 }
@@ -44,8 +44,8 @@ const Done = () => {
     return (
         <div>
             <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-                <h5>Tack för att du handlas hos oss..</h5>
-                <h6>Välkommen åter!</h6>
+                <h5>Tack för din beställning!</h5>
+                <h6>Välkommen åter.</h6>
             </div>
             <img style={{width:'100%'}} src={ require("../../assets/images/" + Products[0].img) } alt="produktImg" />
         </div>
