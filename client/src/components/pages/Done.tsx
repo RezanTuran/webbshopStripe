@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import Error from './Error'
 
 export  interface DonePageImg{
     img: string
@@ -36,7 +38,9 @@ const Done = () => {
             if(session.isVerfied){
                 alert("Betalningen genomfört")
             }else{
-                alert("OBS Betalningen genomfört inte")
+                const App = () => <Error />;
+                const rootElement = document.getElementById("root");
+                ReactDOM.render(<App />, rootElement);
             }
     }
 }
@@ -51,6 +55,5 @@ const Done = () => {
         </div>
     );
 };
-
 
 export default Done;
