@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useEffect } from 'react';
 import { Button, Typography, IconButton } from '@material-ui/core';
 import { CartConsumer, ContextState } from '../contexts/cartContxt'
 import { Link } from 'react-router-dom';
@@ -6,19 +6,47 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import StipePay from './Stripe/StipePay'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ReactDOM from 'react-dom';
 
-export default function cartView() {
+export default function CartView() {
+
+
+    let totalPrice = 0;
+
+    let totalPriceEur=0 ;
+   // window.addEventListener('load', currencyApi)
+  
+    useEffect(() => {
+        currencyApi();
+    }, []);
+
+    
+  
+
+    async function currencyApi() {
+        const response = await fetch('http://localhost:3001/currency-api', {
+            method: "POST",
+        });
+        const session = await response.json()
+        console.log("SS",session);
+        totalPriceEur=totalPrice/session; 
+        totalPriceEur= Math.round((totalPriceEur + Number.EPSILON) * 100) / 100;
+       ReactDOM.render(<h6>EUR: {totalPriceEur}</h6>, document.getElementById('eur'));
+        console.log("TP",totalPriceEur);
+    }
     return (
+        
         <CartConsumer>
             {(contextData: ContextState) => {
-                let totalPrice = 0;
-
+    
                 function cardValidation(){
                     if(totalPrice === 0){
                         alert("Kundvagnen är tomt")
                         window.location.reload();
                     }
                 }
+                   
+                
 
                 return (
                     <div>
@@ -57,7 +85,10 @@ export default function cartView() {
                     </div>
                     
                 
-                        <h6>{contextData.cartItems.length ? "Totalpris: " + totalPrice : "Totalpris: 0"} kr</h6>
+                        <h6>{contextData.cartItems.length ? "Total pris är: " + totalPrice : "Total pris är: 0"} kr</h6>
+
+                        <div id="eur"></div>
+
                             <Link onClick={cardValidation} to="">
                                 <StipePay />
                             </Link>

@@ -3,6 +3,7 @@ require('dotenv').config('.env')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const cors = require('cors')
 const fs = require("fs"); 
+const fetch = require("node-fetch");
 
 const users = require(__dirname+'/ordersList.json'); 
 
@@ -59,6 +60,25 @@ app.post("/verify-checkout-session", async (req, res) => {
         res.json({isVerfied: false})
     }
 })
+
+app.post("/currency-api", async  (req, res) => {
+   
+   const currency = await fetch(`https://free.currconv.com/api/v7/convert?q=EUR_SEK&compact=ultra&apiKey=06645d528c8331686f2b`)
+      .then(response => {
+    if (response.status >= 400) {
+      throw new Error("Bad response from server");
+    }
+    return response.json();
+  })
+  // console.log("K", currency.EUR_SEK);
+
+
+   res.json(currency.EUR_SEK)
+
+                   
+  
+  
+ });
 
 
 app.listen(PORT, () => console.log(`### Server is up and running on port ${PORT} ###`))
