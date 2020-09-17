@@ -20,7 +20,7 @@ const Error = () => {
 
     return(
         <div style={errorPage}>
-            <h1 style={{ fontSize: "20px"}}>Betalningen Misslyckades! </h1>
+            <h1 style={{ fontSize: "20px"}}>OBS! Transaktionen kan inte slutföras! </h1>
             <Link onClick={toHomPage}>
                 <Button 
                     variant="contained" 
@@ -39,7 +39,6 @@ const errorPage : CSSProperties = {
     flexDirection: 'column',
     alignItems: 'center', 
     height: '100vh', 
-    //backgroundImage: "url(" + "/client/src/assets/paymentError.png" + ")",
 }
 const errorImage : CSSProperties = {
     width: '300px',
