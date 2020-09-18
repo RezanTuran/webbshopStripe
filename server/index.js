@@ -40,7 +40,11 @@ app.post("/verify-checkout-session", async (req, res) => {
         if(session){
             if(session.payment_status==='paid'){
             res.json({isVerfied: true})
-            users.push(session); 
+            const items= await stripe.checkout.sessions.listLineItems(req.body.sessionId);
+            const result = users.find( ( user => user.url === items.url ));
+
+            if(!result){
+            users.push(items); 
             fs.writeFile("ordersList.json", JSON.stringify(users, null, 2), err => { 
      
                 // Checking for errors 
@@ -48,7 +52,7 @@ app.post("/verify-checkout-session", async (req, res) => {
                
                 console.log("Done writing"); // Success 
             });
-
+          }
 
             }
             else  throw new Error('Not paid')
