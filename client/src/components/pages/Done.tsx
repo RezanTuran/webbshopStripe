@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import Error from './Error'
 
 export  interface DonePageImg{
     img: string
@@ -36,7 +38,9 @@ const Done = () => {
             if(session.isVerfied){
                 alert("Tack för din betalning!")
             }else{
-                alert("OBS! Transaktionen kan inte slutföras")
+                const App = () => <Error />;
+                const rootElement = document.getElementById("root");
+                ReactDOM.render(<App />, rootElement);
             }
     }
 }
@@ -45,12 +49,11 @@ const Done = () => {
         <div>
             <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
                 <h5>Tack för din beställning!</h5>
-                <h6>Välkommen åter.</h6>
+                <h6>Välkommen åter!</h6>
             </div>
             <img style={{width:'100%'}} src={ require("../../assets/images/" + Products[0].img) } alt="produktImg" />
         </div>
     );
 };
-
 
 export default Done;
