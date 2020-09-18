@@ -30,6 +30,9 @@ Server (Backend)
 * [Express](https://expressjs.com/)
 * [NodeJS](https://nodejs.org/en/)
 
+Ytterligare API
+* [Currencyconverter](https://www.currencyconverterapi.com/docs)
+
 
 ### Att starta projektet
 
