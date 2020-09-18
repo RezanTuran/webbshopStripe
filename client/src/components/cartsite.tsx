@@ -28,11 +28,11 @@ export default function CartView() {
             method: "POST",
         });
         const session = await response.json()
-        console.log("SS",session);
+       // console.log("SS",session);
         totalPriceEur=totalPrice/session; 
         totalPriceEur= Math.round((totalPriceEur + Number.EPSILON) * 100) / 100;
        ReactDOM.render(<h6>EUR: {totalPriceEur}</h6>, document.getElementById('eur'));
-        console.log("TP",totalPriceEur);
+        //console.log("TP",totalPriceEur);
     }
     return (
         
