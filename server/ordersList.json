@@ -1,6 +1,6 @@
 [
   {
-    "id": "cs_test_jHdd4d7nZZHhB9olC1gSADCE1qqWaYrUgTqNzdSot5DyshWHB73eryyN",
+    "id": "cs_test_HkniTL0HIBn1jSL7sXld8kZX7bXURwsEs7nH5n0dG4lLYAp0GYjqou2a",
     "object": "checkout.session",
     "allow_promotion_codes": null,
     "amount_subtotal": 269700,
@@ -9,13 +9,13 @@
     "cancel_url": "http://localhost:3000/cart",
     "client_reference_id": null,
     "currency": "sek",
-    "customer": "cus_I214614NysGZoy",
+    "customer": "cus_I2imbpN9KVfUTp",
     "customer_email": null,
     "livemode": false,
     "locale": null,
     "metadata": {},
     "mode": "payment",
-    "payment_intent": "pi_1HRx1tIFKCcAoJyN9umbOci4",
+    "payment_intent": "pi_1HSdKEIFKCcAoJyNriYP4uCZ",
     "payment_method_types": [
       "card"
     ],
@@ -32,54 +32,22 @@
     }
   },
   {
-    "id": "cs_test_fUU0gkO1H2VrelwvtlI2EHD0VWTEx952kQt6jmzIFbct3dl318SXHJcn",
+    "id": "cs_test_HkniTL0HIBn1jSL7sXld8kZX7bXURwsEs7nH5n0dG4lLYAp0GYjqou2a",
     "object": "checkout.session",
     "allow_promotion_codes": null,
-    "amount_subtotal": 89900,
-    "amount_total": 89900,
+    "amount_subtotal": 269700,
+    "amount_total": 269700,
     "billing_address_collection": null,
     "cancel_url": "http://localhost:3000/cart",
     "client_reference_id": null,
     "currency": "sek",
-    "customer": "cus_I21epdAb6udwcb",
+    "customer": "cus_I2imbpN9KVfUTp",
     "customer_email": null,
     "livemode": false,
     "locale": null,
     "metadata": {},
     "mode": "payment",
-    "payment_intent": "pi_1HRxaeIFKCcAoJyNrSP1dIMv",
-    "payment_method_types": [
-      "card"
-    ],
-    "payment_status": "paid",
-    "setup_intent": null,
-    "shipping": null,
-    "shipping_address_collection": null,
-    "submit_type": null,
-    "subscription": null,
-    "success_url": "http://localhost:3000/done?session_id={CHECKOUT_SESSION_ID}",
-    "total_details": {
-      "amount_discount": 0,
-      "amount_tax": 0
-    }
-  },
-  {
-    "id": "cs_test_fUU0gkO1H2VrelwvtlI2EHD0VWTEx952kQt6jmzIFbct3dl318SXHJcn",
-    "object": "checkout.session",
-    "allow_promotion_codes": null,
-    "amount_subtotal": 89900,
-    "amount_total": 89900,
-    "billing_address_collection": null,
-    "cancel_url": "http://localhost:3000/cart",
-    "client_reference_id": null,
-    "currency": "sek",
-    "customer": "cus_I21epdAb6udwcb",
-    "customer_email": null,
-    "livemode": false,
-    "locale": null,
-    "metadata": {},
-    "mode": "payment",
-    "payment_intent": "pi_1HRxaeIFKCcAoJyNrSP1dIMv",
+    "payment_intent": "pi_1HSdKEIFKCcAoJyNriYP4uCZ",
     "payment_method_types": [
       "card"
     ],
