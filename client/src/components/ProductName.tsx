@@ -28,8 +28,6 @@ function ProductName(props: Props){
  );
 }
  
-// var iconStyle: CSSProperties = {
-// margin: 20
-// }
+
  
 export default ProductName;

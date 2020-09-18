@@ -124,5 +124,75 @@
     ],
     "has_more": false,
     "url": "/v1/checkout/sessions/cs_test_vIJbCSxFdmdMQOCWgdMm3LiM4dqPV0PJ8WEDebbE6KGNE7zQDuT5hd9G/line_items"
+  },
+  {
+    "object": "list",
+    "data": [
+      {
+        "id": "li_1HSfSwIFKCcAoJyNPAHl8ESm",
+        "object": "item",
+        "amount_subtotal": 179800,
+        "amount_total": 179800,
+        "currency": "sek",
+        "description": "Adidas - Superstar classic",
+        "price": {
+          "id": "price_1HSfSwIFKCcAoJyN9LxyBNAG",
+          "object": "price",
+          "active": false,
+          "billing_scheme": "per_unit",
+          "created": 1600419674,
+          "currency": "sek",
+          "livemode": false,
+          "lookup_key": null,
+          "metadata": {},
+          "nickname": null,
+          "product": "prod_I2kyfvTvDzuFkH",
+          "recurring": null,
+          "tiers_mode": null,
+          "transform_quantity": null,
+          "type": "one_time",
+          "unit_amount": 89900,
+          "unit_amount_decimal": "89900"
+        },
+        "quantity": 2
+      }
+    ],
+    "has_more": false,
+    "url": "/v1/checkout/sessions/cs_test_HNg20y0VHTdSokPeaxPanGWQgfl91BrWXfL1bibjkpauhHBDP8UzEgFg/line_items"
+  },
+  {
+    "object": "list",
+    "data": [
+      {
+        "id": "li_1HSfYSIFKCcAoJyN2ehBaQxa",
+        "object": "item",
+        "amount_subtotal": 179800,
+        "amount_total": 179800,
+        "currency": "sek",
+        "description": "Adidas - Superstar classic",
+        "price": {
+          "id": "price_1HSfYSIFKCcAoJyNhIiIZiZ4",
+          "object": "price",
+          "active": false,
+          "billing_scheme": "per_unit",
+          "created": 1600420016,
+          "currency": "sek",
+          "livemode": false,
+          "lookup_key": null,
+          "metadata": {},
+          "nickname": null,
+          "product": "prod_I2l4P87uKMizB4",
+          "recurring": null,
+          "tiers_mode": null,
+          "transform_quantity": null,
+          "type": "one_time",
+          "unit_amount": 89900,
+          "unit_amount_decimal": "89900"
+        },
+        "quantity": 2
+      }
+    ],
+    "has_more": false,
+    "url": "/v1/checkout/sessions/cs_test_xPxVanzjR4GWoQwaMDw3ZCIMVEbBDKObd6t2bG6hn4crfjuUf7LG9YmN/line_items"
   }
 ]

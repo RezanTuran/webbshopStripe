@@ -11,7 +11,6 @@ const stripePromise = loadStripe('pk_test_51HMTp2IFKCcAoJyN5fiHwp6EwNIPvRPfRoOW2
 
 function StipePay() {
   const { cartItems } = useContext(CartContext);
- // console.log("ST",cartItems[0]);
 
  const  line_items= cartItems.map( item =>{
   const container = {};
@@ -28,25 +27,18 @@ function StipePay() {
 
 const handleClick = async (event) => {
 
-   // console.log("LI",line_items[0]);
-    // Get Stripe.js instance
     const stripe = await stripePromise;
-   //console.log(JSON.stringify(line_items));
-    // Call your backend to create the Checkout Session
     const response = await fetch('/create-checkout-session', { method: 'POST' , body: JSON.stringify(line_items),
   headers: { 'Accept': 'application/json','Content-Type': 'application/json'}});
 
     const session = await response.json();
 
-    // When the customer clicks on the button, redirect them to Checkout.
     const result = await stripe.redirectToCheckout({
       sessionId: session.id,
     });
 
     if (result.error) {
-      // If `redirectToCheckout` fails due to a browser or network
-      // error, display the localized error message to your customer
-      // using `result.error.message`.
+      
     }
   };
 

@@ -24,7 +24,6 @@ static contextType=CartContext;
     }
  
     handleChange = (event) => {
-        //console.log("THIS", this.state.total);
         const { formData } = this.state;
         formData[event.target.name] = event.target.value;
         this.setState({ formData });
@@ -46,7 +45,6 @@ static contextType=CartContext;
             setTimeout(() => this.setState({ submitted: false }), 5000);
         });
 
-        //console.log(this.state.submitted);
 
         if(this.state.submitted === true){
             this.handleDesableClik()

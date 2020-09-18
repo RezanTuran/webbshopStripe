@@ -152,7 +152,6 @@ class Product extends Component<{}, State> {
                   <p>stl.{ product.size }</p>
                   <CartConsumer>
                   {(contextData: ContextState) => {
-                    //console.log(contextData.cartItems)
                     return (
                       <Button style={button} variant="contained" color="primary" onClick={() => contextData.addProductToCart(product)}>
                         KÖP</Button>

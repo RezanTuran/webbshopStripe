@@ -16,7 +16,6 @@ interface Props {
 export class ProductView extends React.Component<Props & RouteProps, State> {
 
         render() {
-            console.log(this.props.location)
             let test = this
             
             let newString = test.props.location.pathname.replace("/product/", "");
@@ -36,7 +35,6 @@ export class ProductView extends React.Component<Props & RouteProps, State> {
                             <Typography style={textPosition}>{productToDisplay[0].extraDescription}</Typography>
                 <CartConsumer>
                   {(contextData: ContextState) => {
-                    //console.log(contextData.cartItems)
                     return (
                       <Button variant="contained" color="primary" onClick={() => contextData.addProductToCart(productToDisplay[0])}>
                         KÖP</Button>

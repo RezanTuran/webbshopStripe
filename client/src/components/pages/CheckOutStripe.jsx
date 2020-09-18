@@ -4,7 +4,6 @@ import StripeCheckoutButton from '../Stripe/StipePay'
 
 
 const CheckOutStripe = (totalPrice) => {
-    //console.log("BYN",totalPrice.value);
     return(
     
         <div>

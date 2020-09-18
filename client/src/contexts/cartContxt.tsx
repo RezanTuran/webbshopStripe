@@ -39,7 +39,6 @@ export const CartContext = createContext<ContextState>({
     },
     countTotalPrice: () => {
         return 1;
-       // console.log("error while counting your cart items")
     }
 })
 

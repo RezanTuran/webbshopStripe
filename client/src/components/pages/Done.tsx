@@ -26,15 +26,12 @@ const Done = () => {
         const sessionId = urlParams.get('session_id');
     
         if(sessionId){
-          console.log(sessionId);
             const response = await fetch('http://localhost:3001/verify-checkout-session', {
                 headers: {"Content-Type": "application/json"},
                 method: "POST",
                 body: JSON.stringify( {sessionId} )
             });
-            const session = await response.json()
-            console.log(session.isVerfied);
-            
+            const session = await response.json()            
             if(session.isVerfied){
                 alert("Tack för din betalning!")
             }else{

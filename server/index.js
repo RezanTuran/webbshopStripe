@@ -14,12 +14,8 @@ const PORT = 3001
 app.use(express.json())
 
 app.use(cors())
-//app.get('/api/shoes', (req,res) => res.json(shoes))
-
-//const stripe = require('stripe')('sk_test_51HMTp2IFKCcAoJyNeaX7h3vb65Mr6W7iJ8r7LcEfdFUJPQRhVbRj1ibIgWUXh7awkWS6h5Y6U20Rdp79hPZYq3rL00I2vZ9OVz');
 
 app.post("/create-checkout-session", async (req, res) => {
-  console.log(JSON.stringify(req.body));
 
   const items=req.body ;
   const session = await stripe.checkout.sessions.create({
@@ -74,7 +70,6 @@ app.post("/currency-api", async  (req, res) => {
     }
     return response.json();
   })
-  // console.log("K", currency.EUR_SEK);
 
 
    res.json(currency.EUR_SEK)
